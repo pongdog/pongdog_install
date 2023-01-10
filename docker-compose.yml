@@ -16,8 +16,7 @@ services:
     image: matiah/pongdog-hw:testcandidate
     network_mode: host
     volumes:
-      - ./config 
-      - ./pongdog:/data
+      - ./config:/pongdog_hw
     privileged: true
     depends_on:
       - mosquitto
@@ -26,6 +25,8 @@ services:
   pongdog_gamestate:
     image: matiah/pongdog-gamestate:latest
     network_mode: host
+    volumes:
+      - ./config:/pongdog_gamestate
     depends_on:
     - mosquitto
     - pongdog_hw
