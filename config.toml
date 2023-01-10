@@ -1,0 +1,14 @@
+#Pongdog configuration file. Only for testing!
+
+#GPIO-pins:
+Player1_button = 26
+Player2_button = 20
+Player1_led = 30
+Player2_led = 27
+
+#MQTT-settings
+Broker_address = "localhost"
+Broker_port = 1883
+
+#Game-related settings
+Timeout = 900 # seconds before the game times out.
