@@ -13,7 +13,7 @@ services:
       - 9001:9001
   
   pongdog_hw:
-    image: matiah/pongdog-hw:testcandidate
+    image: matiah/pongdog-hw:latest
     network_mode: host
     volumes:
       - ./config:/pongdog_hw
