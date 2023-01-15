@@ -13,20 +13,20 @@ services:
       - 9001:9001
   
   pongdog_hw:
-    image: matiah/pongdog-hw:latest
+    image: matiah/pongdog-hw:no_conf
     network_mode: host
     volumes:
-      - ./config:/pongdog_hw
+      - ./config.toml:/godog/config.toml
     privileged: true
     depends_on:
       - mosquitto
     restart: unless-stopped
   
   pongdog_gamestate:
-    image: matiah/pongdog-gamestate:latest
+    image: matiah/pongdog-gamestate:no_conf
     network_mode: host
     volumes:
-      - ./config:/pongdog_gamestate
+      - ./config.toml:/app/config.toml
     depends_on:
     - mosquitto
     - pongdog_hw

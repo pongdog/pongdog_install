@@ -3,7 +3,7 @@
 #GPIO-pins:
 Player1_button = 26
 Player2_button = 20
-Player1_led = 30
+Player1_led = 3001
 Player2_led = 27
 
 #MQTT-settings
