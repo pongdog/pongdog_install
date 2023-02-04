@@ -11,8 +11,8 @@ Broker_address = "localhost"
 Broker_port = 1883
 
 #Game-related settings
+Table_name = "eldog"
 Timeout = 900 # seconds before the game times out.
-
 
 #Debug-settings, please ignore:
 Hw_ignore_cardreader = false
