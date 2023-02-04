@@ -12,7 +12,8 @@ services:
       - 1883:1883
       - 9001:9001
   
-  pongdog_hw:
+  hw:
+    container_name: hw
     image: matiah/pongdog-hw:no_conf
     network_mode: host
     volumes:
@@ -22,14 +23,15 @@ services:
       - mosquitto
     restart: unless-stopped
   
-  pongdog_gamestate:
+  gamestate:
+    container_name: gamestate
     image: matiah/pongdog-gamestate:no_conf
     network_mode: host
     volumes:
       - ./config.toml:/app/config.toml
     depends_on:
     - mosquitto
-    - pongdog_hw
+    - hw
     restart: unless-stopped
 
   db:
@@ -45,8 +47,8 @@ services:
       retries: 10
     restart: unless-stopped
 
-  app:
-    container_name: pongdog_app
+  graphics:
+    container_name: graphics
     image: jakvah/pongdog:raspibuild
     links:
         - "db"
