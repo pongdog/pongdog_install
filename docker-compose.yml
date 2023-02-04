@@ -14,7 +14,7 @@ services:
   
   hw:
     container_name: hw
-    image: matiah/pongdog-hw:no_conf
+    image: matiah/pongdog-hw:0.1
     network_mode: host
     volumes:
       - ./config.toml:/godog/config.toml
