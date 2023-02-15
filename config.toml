@@ -15,4 +15,4 @@ Table_name = "eldog"
 Timeout = 900 # seconds before the game times out.
 
 #Debug-settings, please ignore:
-Hw_ignore_cardreader = false
+Hw_ignore_cardreader = true
