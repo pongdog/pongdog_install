@@ -49,7 +49,7 @@ services:
 
   graphics:
     container_name: graphics
-    image: jakvah/pongdog:raspibuild
+    image: jakvah/pongdog:0.1
     links:
         - "db"
     ports:
