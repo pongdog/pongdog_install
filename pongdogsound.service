@@ -1,0 +1,13 @@
+[Unit]
+Description=PongDogSound
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/pi/install_test/pongdog_install/
+ExecStart=/home/pi/install_test/pongdog_install/pongdog_sound
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
